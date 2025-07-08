@@ -3,9 +3,7 @@ from datetime import date
 from typing import Optional
 
 
-# -----------------------
-# 🔹 ÉLÈVE
-# -----------------------
+# eleve
 class EleveBase(BaseModel):
     nom: str
     prenom: str
@@ -21,9 +19,7 @@ class EleveOut(EleveBase):
         orm_mode = True
 
 
-# -----------------------
-# 🔹 MATIÈRE
-# -----------------------
+# Matière
 class MatiereBase(BaseModel):
     nom: str
 
@@ -37,9 +33,7 @@ class MatiereOut(MatiereBase):
         orm_mode = True
 
 
-# -----------------------
-# 🔹 EXAMEN
-# -----------------------
+# Examen
 class ExamenBase(BaseModel):
     date: date
     matiere_id: int
@@ -54,9 +48,7 @@ class ExamenOut(ExamenBase):
         orm_mode = True
 
 
-# -----------------------
-# 🔹 NOTE
-# -----------------------
+# note
 class NoteBase(BaseModel):
     valeur: float
     eleve_id: int
